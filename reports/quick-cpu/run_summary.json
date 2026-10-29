@@ -1,0 +1,38 @@
+{
+  "status": "completed",
+  "mode": "quick",
+  "seed": 42,
+  "synthetic_only": true,
+  "not_a_clinical_model": true,
+  "runtime": {
+    "python": "3.12.14",
+    "torch": "2.9.1+cpu",
+    "device": "cpu"
+  },
+  "rows": {
+    "train": 2400,
+    "validation": 600,
+    "test": 1000
+  },
+  "features": 58,
+  "training_epochs_completed": 20,
+  "clean_test": {
+    "linear_baseline": {
+      "accuracy": 0.942,
+      "macro_f1": 0.9419405471202511
+    },
+    "pytorch_mlp": {
+      "accuracy": 0.993,
+      "macro_f1": 0.9929999369994329
+    }
+  },
+  "conditions": [
+    "clean",
+    "rotation_25deg",
+    "scale_1_5x",
+    "gaussian_noise",
+    "single_point_shift",
+    "random_perturbation",
+    "one_missing_point"
+  ]
+}

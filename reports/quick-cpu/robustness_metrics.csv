@@ -1,0 +1,15 @@
+condition,model,accuracy,macro_f1
+clean,linear_baseline,0.942,0.9419405471202511
+clean,pytorch_mlp,0.993,0.9929999369994329
+rotation_25deg,linear_baseline,0.945,0.9449400397032368
+rotation_25deg,pytorch_mlp,0.993,0.9929999369994329
+scale_1_5x,linear_baseline,0.946,0.9459446473188545
+scale_1_5x,pytorch_mlp,0.993,0.9929999369994329
+gaussian_noise,linear_baseline,0.506,0.349914462429267
+gaussian_noise,pytorch_mlp,0.5,0.3333333333333333
+single_point_shift,linear_baseline,0.491,0.32930918846411805
+single_point_shift,pytorch_mlp,0.494,0.33065595716198126
+random_perturbation,linear_baseline,0.558,0.4633317144244779
+random_perturbation,pytorch_mlp,0.537,0.41341840244565253
+one_missing_point,linear_baseline,0.5,0.3333333333333333
+one_missing_point,pytorch_mlp,0.5,0.3333333333333333

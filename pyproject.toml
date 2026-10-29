@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vision-landmark-robustness-lab"
+version = "0.1.0"
+description = "Synthetic geometric-landmark classification and robustness evaluation"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "matplotlib==3.11.2",
+  "numpy==2.5.4",
+  "pandas==3.1.0",
+  "scikit-learn==1.9.1",
+  "torch==2.9.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2", "ruff==0.17.3"]
+
+[project.scripts]
+landmark-robustness = "vision_landmark_robustness_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
